@@ -21,7 +21,7 @@ ENV/
 Thumbs.db
 
 # Data files
-*.jsonl
+# *.jsonl
 *.csv
 *.pkl
 *.pickle
