@@ -8,6 +8,9 @@
 - Recall@K, MRR 등 메트릭 계산
 - 결과 비교 및 분석
 - specific_encoder.py의 type-specific embedding 및 vertical partitioning 지원
+
+Author: Subset Retrieval Evaluation Team
+Version: 1.0
 """
 import os
 # GPU 지정 (환경변수가 없으면 GPU 1 사용 - 가장 여유로운 GPU)
