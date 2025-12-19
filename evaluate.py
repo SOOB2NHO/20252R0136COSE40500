@@ -14,6 +14,7 @@ Version: 1.0
 """
 import os
 # GPU 지정 (환경변수가 없으면 GPU 1 사용 - 가장 여유로운 GPU)
+# 환경 변수가 설정되어 있지 않은 경우에만 기본값 설정
 if "CUDA_VISIBLE_DEVICES" not in os.environ:
     os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
@@ -29,6 +30,7 @@ import numpy as np
 import torch
 
 # SACU model 경로 추가
+# 상위 디렉토리의 model 폴더를 Python path에 추가
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "model"))
 from retriever import SacuEmbeddingRetriever, SacuTableRetriever
 from specific_encoder import SacuTableEncoder as SpecificSacuTableEncoder
